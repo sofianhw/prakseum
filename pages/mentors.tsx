@@ -26,7 +26,7 @@ import { Mentor } from '@lib/types';
 import { META_DESCRIPTION } from '@lib/constants';
 
 type Props = {
-  mentor: Mentor[];
+  mentors: Mentor[];
 };
 
 export default function Mentors({ mentors }: Props) {
