@@ -38,7 +38,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
 
   return (
     <>
-      <ViewSource />
+      {/* <ViewSource /> */}
       <div className={styles.background}>
         {!hideNav && (
           <header className={cn(styles.header)}>
@@ -65,7 +65,7 @@ export default function Layout({ children, className, hideNav, layoutStyles }: P
               ))}
             </div>
             <div className={cn(styles['header-right'])}>
-              <HostedByVercel />
+              &nbsp;
             </div>
           </header>
         )}

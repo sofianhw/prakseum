@@ -18,6 +18,19 @@ export type Image = {
   url: string;
 };
 
+export type Mentor = {
+  name: string;
+  bio: string;
+  title: string;
+  slug: string;
+  twitter: string;
+  github: string;
+  company: string;
+  talk: Talk;
+  image: Image;
+  imageSquare: Image;
+};
+
 export type Speaker = {
   name: string;
   bio: string;
@@ -37,6 +50,14 @@ export type Stage = {
   stream: string;
   discord: string;
   schedule: Talk[];
+};
+
+export type Event = {
+  title: string;
+  description: string;
+  start: string;
+  end: string;
+  speakers: Speaker[];
 };
 
 export type Talk = {

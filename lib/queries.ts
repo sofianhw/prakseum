@@ -15,6 +15,21 @@ export const getAllSpeakersQuery = groq`*[_type == "speaker"]{
         image
       }`
 
+export const getAllMentorsQuery = groq`*[_type == "speaker"]{
+        name,
+        bio,
+        title,
+        "slug": slug.current,
+        twitter,
+        github,
+        "company": company->name,
+        "talk": *[_type == "talk" && ^._id in speakers[]._ref][0]{
+          title,
+          description
+        },
+        image
+      }`
+
 export const getAllStagesQuery = groq`*[_type == "stage"]{
         name,
         "slug": slug.current,
